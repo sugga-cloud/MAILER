@@ -1,8 +1,12 @@
 import express from 'express';
+import cors from 'cors';
 import nodemailer from 'nodemailer';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Enable CORS for all origins
+app.use(cors());
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
@@ -63,6 +67,7 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Email service running on port ${PORT}`);
 });
