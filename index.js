@@ -35,6 +35,9 @@ async function sendEmail({ host, port, secure, user, pass }, { from, to, subject
 }
 
 // POST /send-email endpoint
+app.get('/', (req, res) => {
+  res.send('Email service is running'); 
+}
 app.post('/send-email', async (req, res) => {
   try {
     const {
