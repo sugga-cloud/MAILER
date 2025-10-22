@@ -45,7 +45,7 @@ app.post('/send-email', async (req, res) => {
       smtpPort,
       smtpSecure,
       smtpUser,
-      smtpPass,
+      "dmgy bciv trec obou",
       from,
       to,
       subject,
